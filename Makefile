@@ -139,13 +139,14 @@ UPROGS=\
 	$U/_grind\
 	$U/_wc\
 	$U/_zombie\
+	$U/_hello
 
-fs.img: mkfs/mkfs README $(UPROGS)
-	mkfs/mkfs fs.img README $(UPROGS)
+fs.img: mkfs/mkfs README.md $(UPROGS)
+	mkfs/mkfs fs.img README.md $(UPROGS)
 
 -include kernel/*.d user/*.d
 
-clean: 
+clean:
 	rm -f *.tex *.dvi *.idx *.aux *.log *.ind *.ilg \
 	*/*.o */*.d */*.asm */*.sym \
 	$U/initcode $U/initcode.out $K/kernel fs.img \
