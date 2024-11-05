@@ -12,6 +12,11 @@ but is implemented for a modern RISC-V multiprocessor using ANSI C.
 sudo pacman -S riscv64-linux-gnu-binutils riscv64-linux-gnu-gcc riscv64-linux-gnu-gdb qemu-emulators-full
 ```
 
+## Debugging
+
+- Run `riscv64-linux-gnu-gdb` inside the **xv6** directory, then to debug a file you've coded, `file user/_<name>`, `b main`, and `continue` (can't `run` because it has to start the kernel too)
+- [Source](https://pdos.csail.mit.edu/6.1810/2024/labs/guidance.html)
+
 ## BUILDING AND RUNNING XV6
 
 You will need a RISC-V "newlib" tool chain from
@@ -19,4 +24,4 @@ https://github.com/riscv/riscv-gnu-toolchain, and qemu compiled for
 riscv64-softmmu.  Once they are installed, and in your shell
 search path, you can run "make qemu".
 
-NOTE: the aforementioned isn't really needed unless you want to use a debugger or other complicated tools. Simply downloading the required dependencies should suffice for trivially compiling and running programs.
+NOTE: Trivially installing the dependencies listed above should suffice.
