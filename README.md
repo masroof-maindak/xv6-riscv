@@ -14,7 +14,7 @@ sudo pacman -S riscv64-linux-gnu-binutils riscv64-linux-gnu-gcc riscv64-linux-gn
 
 ## Debugging
 
-- Run `riscv64-linux-gnu-gdb` inside the **xv6** directory, then to debug a file you've coded, `file user/_<name>`, `b main`, and `continue` (can't `run` because it has to start the kernel too)
+- Run `riscv64-linux-gnu-gdb` inside the **xv6** directory (whilst the xv6 VM is operational in another terminal obviously), and then to debug a file you've coded, `file user/_<name>`, `b main`, and `continue` (can't `run` because it has to start the kernel too)
 - [Source](https://pdos.csail.mit.edu/6.1810/2024/labs/guidance.html)
 
 ## BUILDING AND RUNNING XV6
